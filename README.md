@@ -1,4 +1,4 @@
-# vehicle-lease
+# Vehicle lease
 
 > App produced with HTML, Javascript and Bootstrap
 
