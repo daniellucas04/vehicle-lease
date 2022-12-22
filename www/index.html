@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>Locação de Veículos</title>
+    </head>
+    <body class="p-3 bg-white">
+        <!-- <center><img id="carros" src="img/carros.jpg"></center><br><br>  -->
+        <div> 
+            <p class="form-floating mb-3">
+                <input id="nomeCliente" class="form-control" type="text">
+                <label for="nomeCliente">Nome do cliente</label>           
+            </p>
+            <p class="form-floating">
+                <input type="number" class="form-control" id="telefone">
+                <label for="telefone">Telefone (ex: 11912345678)</label>
+            </p>
+            <p class="form-floating">
+                <input id="dataRetirada" class="form-control" type="date">
+                <label for="dataRetirada">Data de Retirada</label>
+            </p>
+            <p class="form-floating">
+                <input id="dataEntrega" class="form-control" type="date">
+                <label for="dataEntrega">Data de Entrega</label>
+            </p>
+            <p class="form-floating">
+                <select id="veiculo" class="form-select">
+                    <option value="Ferrari">Ferrari (PROMOÇÃO! $1500/dia)</option>
+                    <option value="Onix">Onix ($100/dia)</option>
+                    <option value="HB20">HB20 ($1000/dia)</option>
+                    <option value="Ford KA">Ford KA ($200/dia)</option>
+                    <option value="Corola">Corola ($100/dia)</option>
+                    <option value="Palio">Palio ($100/dia)</option>
+                    <option value="Sandeiro">Sandeiro ($1000/dia)</option>
+                    <option value="Gol">Gol ($500/dia)</option>
+                    <option value="Fiat Toro">Fiat Toro ($1000/dia)</option>
+                </select>
+                <label for="veiculo">Escolha o veículo</label>
+            </p>
+            <p class="form-floating">
+                <select class="form-select" id="formaPagamento">
+                    <option value="Cartão de Credito">Cartão de Credito</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="PIX">PIX</option>
+                    <option value="Boleto">Boleto</option>
+                </select>
+                <label for="formaPagamento">Escolha uma forma de pagamento</label>
+            </p>
+            <p class="d-grid">
+                <button id="botaoFinalizar" type="button" class="btn btn-success btn-lg">Finalizar</button>
+            </p>
+            <div class="container" id="divBotoes" hidden>
+                <div class="row">
+                    <div class="col d-grid btn btn-primary btn-lg" id="btnAtualizar">
+                        Atualizar
+                    </div>
+                    <div class="col d-grid btn btn-danger btn-lg offset-1" id="btnExcluir">
+                        Excluir
+                    </div>
+                </div>
+            </div>
+            <p>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Data Retirada</th>
+                            <th scope="col">Data Entrega</th>
+                            <th scope="col">Veiculo</th>
+                            <th scope="col">Pagamento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultado"></tbody>
+                </table>
+            </p>
+            <!-- <p id="msg">⚠ SE BEBER NÃO DIRIJA ⚠</p> 
+            <img id="brahma" src="img/brahma.jpg">-->
+        </div>        
+        <script src="js/index.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/localdb.min.js"></script>
+    </body>
+</html>

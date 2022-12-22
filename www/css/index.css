@@ -1,0 +1,16 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+#msg{
+    width: 210px;
+    height: 30px;
+    background-color: rgb(255, 196, 0);
+}
+
+#carros{
+    display: flex;
+    justify-content: end;
+} */
